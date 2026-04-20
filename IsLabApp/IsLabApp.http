@@ -1,0 +1,46 @@
+@IsLabApp_HostAddress = http://localhost:5214
+
+GET {{IsLabApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{IsLabApp_HostAddress}}/health
+Accept: application/json
+
+###
+
+GET {{IsLabApp_HostAddress}}/version
+Accept: application/json
+
+###
+
+GET {{IsLabApp_HostAddress}}/db/ping
+Accept: application/json
+
+###
+
+POST {{IsLabApp_HostAddress}}/api/notes
+Content-Type: application/json
+
+{
+  "title": "First note",
+  "text": "Note text"
+}
+
+###
+
+GET {{IsLabApp_HostAddress}}/api/notes
+Accept: application/json
+
+###
+
+GET {{IsLabApp_HostAddress}}/api/notes/1
+Accept: application/json
+
+###
+
+DELETE {{IsLabApp_HostAddress}}/api/notes/1
+Accept: application/json
+
+###
